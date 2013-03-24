@@ -1,0 +1,10 @@
+<% _.each(events, function(event) { %>
+<li>
+  <p><code><%= event.type %></small></code></p>
+  <div>
+    <img src="<%= event.actor.avatar_url %>" width="24" height="24" />
+    <%= event.actor.login %>
+  </div>
+  <small><%= event.created_at %></small>
+</li>
+<% }); %>

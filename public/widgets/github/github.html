@@ -1,0 +1,11 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Aura Github</a>
+    <ul class="nav">
+      <% _.each(orgs, function(org) { %>
+      <li><a href="#<%= org %>" data-org='<%= org %>'><%= org %></a></li>
+      <% }); %>
+    </ul>
+    <div class="pull-right" data-aura-widget="login"></div>
+  </div>
+</div>

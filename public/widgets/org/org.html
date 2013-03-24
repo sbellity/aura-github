@@ -1,0 +1,31 @@
+
+<h1>
+  <img src="<%= org.avatar_url %>" width="100" height="100">
+  <%= org.login %>
+</h1>
+
+<ul class="thumbnails well" data-aura-widget="members" data-aura-org="<%= org.login %>"></ul>
+
+<div class="row-fluid">
+  <ul class="nav nav-list span3" >
+    <li class="nav-header">Repos</li>
+    <ul class="unstyled" data-aura-widget="repos"   data-aura-org="<%= org.login %>"></ul>
+  </ul>
+  <div class="span6">
+    <ul class='nav nav-tabs'>
+      <li class="active"><a href="#readme" data-toggle="tab">Readme</a></li>
+      <li><a href="#issues" data-toggle="tab">Issues</a></li>
+    </ul>
+    <div class="tab-content">
+      
+      <div class="tab-pane active" id="readme" data-aura-widget="readme"  data-aura-org="<%= org.login %>">
+      </div>
+      
+      <div class="tab-pane" id="issues">
+        <ul class="unstyled"data-aura-widget="issues"  data-aura-org="<%= org.login %>"></ul>
+      </div>
+
+    </div>
+  </div>
+  <ul class="unstyled span3" data-aura-widget="events"  data-aura-org="<%= org.login %>"></ul>
+</div>

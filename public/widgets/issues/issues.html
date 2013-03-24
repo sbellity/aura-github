@@ -1,0 +1,11 @@
+<% _.each(issues, function(issue) { %>
+<li>
+  <h5>#<%= issue.number %> : <%= issue.title %></h5>
+  <small>
+    <img src="<%= issue.user.avatar_url %>" width="24" height="24" /> <%= issue.user.login %>
+    created <%= issue.created_at %>
+    /
+    updated <%= issue.updated_at %>
+  </small>
+</li>
+<% }); %>
