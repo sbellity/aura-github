@@ -1,5 +1,8 @@
 RewriteEngine On
 
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [R=301,L]
+
 RewriteRule ^\.htaccess$ - [F]
 
 RewriteCond %{REQUEST_URI} =""
@@ -10,3 +13,4 @@ RewriteRule ^(.*)$ /public/$1
 
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^.*$ - [NC,L]
+
