@@ -19,6 +19,16 @@ Then serve this repo via apache or start a php dev server :
 
     php -S localhost:8000 -t public
 
+## Deploying on heroku 
+
+    heroku create --buildpack https://github.com/heroku/heroku-buildpack-php.git
+    
+    heroku config:add \ 
+        GITHUB_CLIENT_ID=your-github-app-id \
+        GITHUB_CLIENT_SECRET=your-github-app-secret
+
+    git push heroku master
+
 ## Hacking
 
 Install [node.js](http://nodejs.org) (Only used for building the app, not needed for deployment)
