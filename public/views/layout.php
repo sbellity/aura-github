@@ -17,6 +17,7 @@
         }
       });
       app.use('extensions/aura-github');
+      app.use('extensions/aura-time');
       app.use(function(app) { window.App = app.createSandbox(); })
       app.start({ widgets: 'body' });
     });
