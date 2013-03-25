@@ -11,22 +11,44 @@ body {
   line-height: 100px;
 }
 
-.issues-list {
-  border-top: 1px solid #ddd;
+.list {
+  border-top: 1px solid #eee;
+  margin: 0;
 }
 
-.issues-list li {
+.list li {
   padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
 }
 
-.issues-list h5 {
+.list small {
+  color: #666;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.issue-list h5 {
   margin: 0 0 5px 0;
   line-height: 1;
 }
 
-.issues-list small {
-  color: #666;
+.activity-list .list-item {
+  list-style: none;
+  overflow: hidden;
+}
+
+.activity-list .item-time {
+  color: #ccc;
+  line-height: 1;
+  margin-bottom: 5px;
   font-size: 13px;
-  line-height: 24px;
+}
+
+.activity-list .actor-avatar {
+  display: block;
+  float: left;
+}
+
+.activity-list .item-wrapper {
+  margin-left: 50px;
 }

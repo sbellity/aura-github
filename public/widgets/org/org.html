@@ -25,7 +25,7 @@
         <div class="tab-content">
           <div class="tab-pane active" id="readme" data-aura-widget="readme"  data-aura-org="<%= org.login %>"></div>
           <div class="tab-pane" id="issues">
-            <ul class="unstyled issues-list" data-aura-widget="issues"  data-aura-org="<%= org.login %>"></ul>
+            <ul class="unstyled list issues-list" data-aura-widget="issues"  data-aura-org="<%= org.login %>"></ul>
           </div>
         </div>
       </div>
@@ -36,7 +36,5 @@
     <ul class="thumbnails well" data-aura-widget="members" data-aura-org="<%= org.login %>"></ul>
   </div>
 
-  <div class="tab-pane" id="events">
-    <ul class="unstyled" data-aura-widget="events"  data-aura-org="<%= org.login %>"></ul>
-  </div>
+  <div class="tab-pane" id="events" data-aura-widget="events"  data-aura-org="<%= org.login %>"></div>
 </div>
