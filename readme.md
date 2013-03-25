@@ -17,7 +17,7 @@ Callback Url:   `http://localhost:8000/auth.php`
 
 create a `config.ini` file (following the config.ini.example format).
 
-Then serve this repo via apache or start a php dev server : 
+Then serve this repo via apache or start a php dev server (php >= 5.4 required) : 
 
     php -S localhost:8000 -t public
 
@@ -30,6 +30,8 @@ Then serve this repo via apache or start a php dev server :
       GITHUB_CLIENT_SECRET='your-github-app-secret'
 
     git push heroku master
+
+And don't forget to update the urls on your Github App config to match the ones on Heroku.
 
 ## Hacking
 
