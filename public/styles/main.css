@@ -1,1 +1,32 @@
-@import "normalize.css";
+body {
+  padding: 20px 0;
+}
+
+.org-header {
+  margin-bottom: 20px;
+}
+
+.org-header h1 {
+  margin: 0 0 0 110px;
+  line-height: 100px;
+}
+
+.issues-list {
+  border-top: 1px solid #ddd;
+}
+
+.issues-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.issues-list h5 {
+  margin: 0 0 5px 0;
+  line-height: 1;
+}
+
+.issues-list small {
+  color: #666;
+  font-size: 13px;
+  line-height: 24px;
+}
