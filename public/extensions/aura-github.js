@@ -23,7 +23,12 @@ define({
             app.core.mediator.emit('github.rateLimit', rateLimit);
           }
           if (status !== 'success') {
-            var error = JSON.parse(xhr.responseText);
+            var error;
+            try {
+              error = JSON.parse(xhr.responseText);  
+            } catch(e) {
+              error = { message: "Connection lost" };
+            }            
             error.path = path;
             app.core.mediator.emit('github.error', error);
           }

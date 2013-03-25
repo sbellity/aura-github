@@ -4,8 +4,14 @@
   if (php_sapi_name() === 'cli-server' && is_file($filename)) {
       return false;
   } else {
-    $viewName = substr($_SERVER['REQUEST_URI'], 1);
-    $viewFile = $viewName . '.php';
+    $uri = explode("?", $_SERVER['REQUEST_URI'], 2);
+    $view = explode("/", $uri[0]);
+    if (isset($view[2])) {
+      $viewParam  = $view[2];
+    }
+    $viewName   = $view[1];
+    $viewFile   = $viewName . '.php';
+
     if (!file_exists(dirname(__FILE__) . '/views/' . $viewFile)) {
       $viewFile = 'orgs.php';
     }

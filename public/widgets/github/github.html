@@ -1,16 +1,6 @@
-<div class="navbar">
-  <div class="navbar-inner">
-    <a class="brand" href="#">Aura Github</a>
-    <ul class="nav">
-      <% _.each(orgs, function(org) { %>
-      <li><a href="#<%= org %>" data-org='<%= org %>'><%= org %></a></li>
-      <% }); %>
-    </ul>
+<ul class="nav nav-pills">
+  <% _.each(orgs, function(org) { %>
+  <li><a href="#<%= org %>" data-org='<%= org %>'><%= org %></a></li>
+  <% }); %>
+</ul>
 
-    <div class="pull-right">
-      <span data-aura-widget="login"></span>
-      Rate Limit : <span class='label' data-aura-widget='rate-limit'>&nbsp;</span>
-    </div>
-    
-  </div>
-</div>

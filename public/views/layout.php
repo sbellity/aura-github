@@ -17,13 +17,18 @@
         }
       });
       app.use('extensions/aura-github');
-      app.use(function(app) { window.App = app.createSandbox(); })
+      app.use('extensions/aura-attachEvents');
+      app.use(function(app) { 
+        window.App = app.createSandbox();
+        window.AppInternal = app;
+      });
       app.start({ widgets: 'body' });
     });
   </script>
   </head>
   <body>
     <div class="container">
+      <?php include_once "_nav.php" ?>
       <?php include_once $viewFile ?>
     </div>
     <a href="https://github.com/sbellity/aura-github" target='github'>
