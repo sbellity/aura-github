@@ -6,6 +6,7 @@
     <title>Aura ♥ Github</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="./styles/bootstrap.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <script src="./libs.js"></script>
     <script>
     require(['aura/aura'], function (Aura) {
