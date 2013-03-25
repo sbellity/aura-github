@@ -6,6 +6,11 @@
       <li><a href="#<%= org %>" data-org='<%= org %>'><%= org %></a></li>
       <% }); %>
     </ul>
-    <div class="pull-right" data-aura-widget="login"></div>
+
+    <div class="pull-right">
+      <span data-aura-widget="login"></span>
+      Rate Limit : <span class='label' data-aura-widget='rate-limit'>&nbsp;</span>
+    </div>
+    
   </div>
 </div>

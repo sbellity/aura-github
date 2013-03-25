@@ -18,6 +18,7 @@
         }
       });
       app.use('extensions/aura-github');
+      app.use(function(app) { window.App = app.createSandbox(); })
       app.start({ widgets: 'body' });
     });
   </script>
