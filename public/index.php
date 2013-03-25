@@ -1,5 +1,5 @@
-<?php 
-  require_once(dirname(dirname(__FILE__)) . '/config.php'); 
+<?php
+  require_once(dirname(dirname(__FILE__)) . '/config.php');
   $filename = __DIR__.preg_replace('#(\?.*)$#', '', $_SERVER['REQUEST_URI']);
   if (php_sapi_name() === 'cli-server' && is_file($filename)) {
       return false;

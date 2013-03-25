@@ -6,6 +6,7 @@
     <title>Aura ♥ Github</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="./styles/bootstrap.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <script src="./libs.js"></script>
     <script>
     require(['aura/aura'], function (Aura) {
@@ -20,8 +21,8 @@
       app.use('extensions/aura-attachEvents');
       app.use(function(app) { 
         window.App = app.createSandbox();
-        window.AppInternal = app;
       });
+      app.use('extensions/aura-time');
       app.start({ widgets: 'body' });
     });
   </script>
