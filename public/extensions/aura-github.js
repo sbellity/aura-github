@@ -7,13 +7,15 @@ define({
       if (data && verb != 'get') {
         data = JSON.stringify(data);
       }
+      var headers = {};
+      if (token && token.length) {
+        headers["Authorization"] = "token " + token;
+      }
       $.ajax({
         type: verb,
         url: 'https://api.github.com/' + path,
         data: data,
-        headers: {
-          "Authorization": "token " + token
-        },
+        headers: headers,
         complete: function(xhr, status) {
           if (xhr.getResponseHeader('X-RateLimit-Limit')) {
             var rateLimit = {
